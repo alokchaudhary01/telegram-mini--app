@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "homepage": "https://alokchaudhary01.github.io/telegram-mini-app/",
+    "homepage": "https://alokchaudhary01.github.io/telegram-mini--app/",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

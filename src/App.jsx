@@ -1,28 +1,14 @@
-import { useEffect, useState } from 'react';
-import { WebApp } from '@twa-dev/sdk';
+import React, { useEffect } from 'react'
+import WebApp from '@twa-dev/sdk'
 
-function App() {
-  const [user, setUser] = useState(null);
-
+const App = () => {
   useEffect(() => {
-    WebApp.ready();
-    WebApp.expand();
-
-    // Get user data or use fallback for browser
-    const telegramUser = WebApp.initDataUnsafe?.user || {
-      first_name: 'Guest',
-      last_name: '',
-    };
-    setUser(telegramUser);
+    WebApp.ready(); // ऐप initialization पूरा हुआ
+    WebApp.expand(); // फुल-स्क्रीन करें
   }, []);
-
   return (
-    <div style={{ backgroundColor: '#000', height: '100vh', padding: '20px' }}>
-      <h1 style={{ color: 'white' }}>
-        Hello, {user?.first_name}!
-      </h1>
-    </div>
-  );
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App
